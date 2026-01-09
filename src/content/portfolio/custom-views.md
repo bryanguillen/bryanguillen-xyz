@@ -23,6 +23,14 @@ pubDate: 'Jan 09 2026'
 
 Build customizable views with a twist – modern tables, new filter drawer, new design system – so that admins can manage their 100s or 1,000s of assets more efficiently and personally.
 
+## Snapshot for project
+
+- Role: Lead FE
+- Team: Myself, staff backend engineer, designer and product director
+- Stack: TypeScript, React, Tailwind, Shadcn
+- Scope: Full-stack coordination
+
+
 ## Context
 
 Post acquisition, we had breathing room to address major customer frustration in Asset Management (tables, exports, filtering, inventory reassignment). The core issue that surfaced through admin feedback was clear: **we lacked personalization**.
@@ -69,7 +77,10 @@ Given time constraints and the investment in platform building blocks, I focused
 ## Artifacts
 
 ![Architecture](../../assets/portfolio/after-3.png)
+
 *(after)*
 
 ![After #2](../../assets/portfolio/after-2.png)
+
 *(after)*
+
