@@ -37,7 +37,7 @@ Post acquisition, we had breathing room to address major customer frustration in
 
 Here are the two main problems we wanted to tacke:
 
-1. The core/business issue - **we lacked personalization** when it came to allowing our admins to configure (and save) their views. They all got the standard and plain view, which contained data that was irrelevant to them.
+1. The core/business issue - **We lacked personalization** when it came to allowing our admins to configure (and save) their views. They all got the standard and plain view, which contained data that was irrelevant to them.
 2. Rearchitect our pages - We needed to establish new patterns within the codebase that would be reused for every other new (and existing) view that we planned on rolling out. Thus, it was important to get this right, since this would be the new standard upon which ALL of our pages were built.
 
 ## Constraints and Tradeoffs
