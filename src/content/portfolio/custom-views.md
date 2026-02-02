@@ -1,6 +1,6 @@
 ---
-title: 'Custom Views for Admin Asset Table'
-description: 'Build customizable views with a twist – modern tables, new filter drawer, new design system – so that admins can manage their 100s or 1,000s of assets more efficiently and personally.'
+title: 'Custom Views for Admin Asset Table (with rearhitected pages)'
+description: 'Build customizable views with a twist – modern tables, new filter drawer, new state management patterns, new design system – so that admins can manage their 100s or 1,000s of assets more efficiently and personally.'
 pubDate: 'Jan 09 2026'
 ---
 
@@ -21,7 +21,7 @@ pubDate: 'Jan 09 2026'
 
 ## Overview
 
-Build customizable views with a twist – modern tables, new filter drawer, new design system – so that admins can manage their 100s or 1,000s of assets more efficiently and personally.
+Build customizable views with a twist – modern tables, new filter drawer, new state management patterns, new design system – so that admins can manage their 100s or 1,000s of assets more efficiently and personally. The secondary deliverable here was a complete rearchitecture of our pages internally, as well; the goal was to build something scalable that other devs can easily reuse to build the fleet of pages for version 2.0 of the platform.
 
 ## Snapshot for project
 
@@ -33,17 +33,14 @@ Build customizable views with a twist – modern tables, new filter drawer, new 
 
 ## Context
 
-Post acquisition, we had breathing room to address major customer frustration in Asset Management (tables, exports, filtering, inventory reassignment). The core issue that surfaced through admin feedback was clear: **we lacked personalization**.
+Post acquisition, we had breathing room to address major customer frustration in Asset Management (tables, exports, filtering, inventory reassignment).
 
-By default, tables rendered all columns, and filter/pagination choices weren’t persisted. Every return visit meant reapplying filters and wrestling with irrelevant data. Since this is the **primary** page admins live in, the impact was real—one of our largest customers explicitly raised **churn risk** due to the lack of saved views.
+Here are the two main problems we wanted to tacke:
 
-As we scaled, the pattern became obvious: we needed a durable personalization platform, not a one-off patch.
+1. The core/business issue - **we lacked personalization** when it came to allowing our admins to configure (and save) their views. They all got the standard and plain view, which contained data that was irrelevant to them.
+2. Rearchitect our pages - We needed to establish new patterns within the codebase that would be reused for every other new (and existing) view that we planned on rolling out. Thus, it was important to get this right, since this would be the new standard upon which ALL of our pages were built.
 
 ## Constraints and Tradeoffs
-
-### Constraints
-- **Design system alignment:** I was simultaneously leading a UI/design-system overhaul to align with our parent company. This feature had to ship **and** move the product toward the new design system.
-- **Time:** We targeted delivery before quarter-end due to renewal dependencies.
 
 ### Trade-offs
 - **Scalability first:** We invested a couple of extra sprints to lay foundation work, since this would be the first of many views adopting the new architecture (technical + visual).
@@ -59,7 +56,8 @@ As we scaled, the pattern became obvious: we needed a durable personalization pl
 
 ### Testing Strategy
 - **Unit tests:** Complex utilities + reusable components/blocks.
-- **E2E smoke:** Page load + core navigation and happy paths.
+- **Smoke:** Page load + core navigation and happy paths.
+- **E2E:** Test flows where we make money (i.e. reassignment, etc.)
 
 Given time constraints and the investment in platform building blocks, I focused on testing the **store logic**, key utilities, and E2E stability.
 
