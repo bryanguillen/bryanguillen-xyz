@@ -1,5 +1,5 @@
 ---
-title: 'Custom Views for Admin Asset Table (with rearhitected pages)'
+title: 'Custom Views for Admin Asset Table (with rearchitected pages)'
 description: 'Build customizable views with a twist – modern tables, new filter drawer, new state management patterns, new design system – so that admins can manage their 100s or 1,000s of assets more efficiently and personally.'
 pubDate: 'Jan 09 2026'
 ---
